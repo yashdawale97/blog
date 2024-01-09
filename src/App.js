@@ -1,15 +1,15 @@
-import { Routes, Route, Outlet, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import About from "./pages/about";
 import Home from "./pages/home";
 import NoMatch from "./pages/noMatch";
-import Nav from "./components/nav";
-// import Header from "./components/header";
+import Header from "./components/header/header";
+import Products from "./pages/products";
 
 function App() {
   return (
     <div>
-      <Nav />
+      <Header />
       <Routes>
         <Route
           index
@@ -21,6 +21,7 @@ function App() {
           path="/about"
           element={<About heading="About Us" isHome={false} />}
         />
+        <Route path="/products" element={<Products />} />
         <Route path="*" element={<NoMatch />} />
       </Routes>
     </div>
