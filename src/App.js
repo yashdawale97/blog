@@ -5,6 +5,7 @@ import Home from "./pages/home";
 import NoMatch from "./pages/noMatch";
 import Header from "./components/header/header";
 import Products from "./pages/products";
+import Contact from "./pages/contact";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           element={<About heading="About Us" isHome={false} />}
         />
         <Route path="/products" element={<Products />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NoMatch />} />
       </Routes>
     </div>
